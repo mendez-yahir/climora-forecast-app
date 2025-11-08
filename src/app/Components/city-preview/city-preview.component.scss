@@ -1,0 +1,20 @@
+ion-item.cityPreview__container::part(native){
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+.container__cityDetails{
+    flex: 1;
+    padding: 0 .5rem;
+    .cityDetails__city{
+        color: #fff;
+    }
+    .cityDetails__provinceCountry{
+        color: rgb(151, 151, 151);
+    }
+}
+
+ion-button.container__btn::part(native){
+    color:#fff;
+    font-size:1em;
+}

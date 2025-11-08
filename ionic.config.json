@@ -1,0 +1,7 @@
+{
+  "name": "Climora",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

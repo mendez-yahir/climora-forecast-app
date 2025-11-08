@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- Envía un evento con cada escritura además de envíar también el valor del Trigger de reseteo -->
+    <app-search-bar (ionInput)="handleInput($event)" [resetInputTrigger]="resetInputSearch"></app-search-bar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Lista de Ciudades -->
+  @if(citySearch.length > 0){
+    <ion-content>
+      <ion-list>
+        @for(c of citySearch; track c){
+          <app-city-preview [city]="c.city" [province]="c.province" [country]="c.country"
+          (eventAddCity)="addCityPreview($event)"></app-city-preview>
+        }
+      </ion-list>
+    </ion-content>
+  }
+<!-- Manage -->
+  <!-- Ciudades -->
+  @if(cityPopulateActive){
+    <ion-text color="medium">
+      <!-- por mientras se guarda asi, hasta que implementemos las ciudades populares -->
+      <p class="font-size-2">Ciudades Guardadas</p>
+    </ion-text>
+    <ion-list>
+      @for(c of savedCities; track c){
+        <app-forecast-preview [data]="c"></app-forecast-preview>
+      }
+    </ion-list>
+
+  }

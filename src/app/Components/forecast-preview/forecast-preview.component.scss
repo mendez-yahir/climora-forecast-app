@@ -1,0 +1,23 @@
+ion-item.forecastPreview__container::part(native){
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+.container__forecastDetails{
+    flex: 1;
+    padding: 0 .5rem;
+    .forecastDetails__city{
+        color: #fff;
+    }
+    .forecastDetails__province{
+        color: rgb(151, 151, 151);
+    }
+    .forecastDetails__country{
+        color: rgb(151, 151, 151);
+    }
+}
+
+ion-button.container__btn::part(native){
+    color:#fff;
+    font-size:1em;
+}
